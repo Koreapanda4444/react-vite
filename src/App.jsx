@@ -1,20 +1,24 @@
+
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Layout from './Layout.jsx'
-import Home from './Home.jsx'
-import About from './About.jsx'
+import Layout from './Layout';
+import Home from "./Home";
+import About from "./About";
+import Flag from "./Flag";
 
 function App() {
-
+  
   return (
-  <>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />} />
-        <Route index element={<Home />} />
-        <Route path="about" element={<About />} />
-      </Routes>
-    </BrowserRouter>
-  </>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="About" element={<About />} />
+            <Route path="Flag" element={<Flag />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 

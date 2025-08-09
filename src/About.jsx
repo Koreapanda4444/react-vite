@@ -1,10 +1,10 @@
 function About() {
-
+  
     return (
-    <>
-        <p>About</p>
-    </>
+      <>
+        <p>Hello About!</p>
+      </>
     )
-}
-
-export default About
+  }
+  
+  export default About
