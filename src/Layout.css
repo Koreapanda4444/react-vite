@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    font-size: 2rem;
+    color: yellow;
+    margin-left: 10px;
+    text-shadow: 5px 5px 5px black;
+}
+
+nav {
+    height: 80px;
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 1rem;
+    padding: 10px;
+}
+
+nav li:hover {
+    background: brown;
+    border-radius: 5px;
+}
+
