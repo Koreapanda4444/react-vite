@@ -1,0 +1,51 @@
+.cardflip-container {
+    max-width: 400px;
+    margin: 40px auto;
+    background: #f1f2f6;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    text-align: center;
+}
+.cardflip-container h1 {
+    margin-bottom: 20px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.card {
+    background: #dfe4ea;
+    border-radius: 8px;
+    font-size: 2em;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+    user-select: none;
+}
+.card.open {
+    background: #00b894;
+    color: white;
+}
+.moves {
+    font-size: 1em;
+    color: #636e72;
+    margin-bottom: 10px;
+}
+.result {
+    margin-top: 15px;
+}
+.result button {
+    padding: 8px 18px;
+    border: none;
+    background: #0984e3;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}

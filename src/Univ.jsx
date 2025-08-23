@@ -1,5 +1,3 @@
-
-
 import './Univ.css';
 import { useState, useEffect } from 'react';
 
@@ -13,19 +11,28 @@ function Univ() {
                 const response = await fetch('http://universities.hipolabs.com/search?country=Korea,%20Republic%20of');
                 const jsonData = await response.json();
                 setData(jsonData);
-            } catch (e) {
-                console.log('Error!!!');
+            } catch (error) {
+                console.log('Error!!!', error);
             }
         };
         fetchData();
     }, []);
+    
     return (
         <div className='unibox'>
             <h1>대학 목록 - Open API 예제</h1>
             <ul>
-                {data.map(item => (
-                    <li key={item.name}>
-                        <p><a href={item.web_pages} target='_blank'>{item.name}</a></p>
+                {data.map((item, index) => (
+                    <li key={`${item.name}-${index}`}>
+                        <p>
+                            <a 
+                                href={item.web_pages && item.web_pages[0]} 
+                                target='_blank' 
+                                rel="noopener noreferrer"
+                            >
+                                {item.name}
+                            </a>
+                        </p>
                     </li>
                 ))}
             </ul>
